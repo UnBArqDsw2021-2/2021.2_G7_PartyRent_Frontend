@@ -5,3 +5,8 @@ public
 dist
 *.scss
 *.json
+commitlint.config.js
+jest.config.js
+dwt.config.js
+index.html
+vite.config.js
