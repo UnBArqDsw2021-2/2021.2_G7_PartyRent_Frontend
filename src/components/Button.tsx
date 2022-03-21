@@ -13,6 +13,7 @@ class Button extends React.Component<Props, State> {
     render() { 
         return (  
             <button
+            className = 'btn'
             style = {{backgroundColor: this.props.color, color: 'white'}}
             >
                 {this.props.title} 
