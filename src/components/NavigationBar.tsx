@@ -14,6 +14,9 @@ class NavigationBar extends React.Component {
                 <Link to="/cart">
                     <button>Carrinho</button>
                 </Link>
+                <Link to="/login">
+                    <button>Login</button>
+                </Link>
             </div>
         );
     }
