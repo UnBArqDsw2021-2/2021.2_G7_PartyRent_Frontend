@@ -1,5 +1,8 @@
 import React from 'react';
+import ProductItem from './ProductItem';
  
+let productsPlaceholder = Array(10).fill(<ProductItem title='Product Item' value='$0,00'/>)
+
 class Products extends React.Component {
     render() { 
         return (  
@@ -9,12 +12,7 @@ class Products extends React.Component {
                     <p>Alugue para a sua festa</p>
                 </header>
                 <div className="products-grid">
-                    <div>Product Item 1</div>
-                    <div>Product Item 2</div>
-                    <div>Product Item 3</div>
-                    <div>Product Item 4</div>
-                    <div>Product Item 5</div>
-                    <div>Product Item 6</div>
+                    {productsPlaceholder}
                 </div>
             </div>
         );
