@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductItem from './ProductItem';
  
-let productsPlaceholder = Array(10).fill(<ProductItem title='Product Item' value='$0,00'/>)
+let productsPlaceholder = Array(10).fill(<ProductItem id="0000" title='Product Item' value='$0,00'/>)
 
 class Products extends React.Component {
     render() { 
