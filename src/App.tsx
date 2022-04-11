@@ -4,7 +4,8 @@ import Home from "./components/Home";
 import Products from "./components/Products";
 import NavigationBar from "./components/NavigationBar"
 import ShoppingCart from "./components/ShoppingCart"
-import Login from "./components/Login";
+import Login from "./components/Login/Login";
+import Register from "./components/Login/Register";
 import ProductDetail from './components/ProductDetail';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/products/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<ShoppingCart />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>
   )
