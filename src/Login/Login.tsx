@@ -30,7 +30,6 @@ function Login() {
         //         setVariant('danger');
         //         setAlertText('Email/Senha incorretos, digite novamente.');
         //     }
-
         //     if (err.response.status === 500) {
         //         setShow(true);
         //         setVariant('danger');
@@ -38,7 +37,6 @@ function Login() {
         //             'Ocorreu algum erro no seu login, tente novamente.',
         //         );
         //     }
-        alert(email);
     }
 
     return (

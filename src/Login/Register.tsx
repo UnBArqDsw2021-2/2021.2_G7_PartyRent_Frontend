@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Alert, Modal, Button } from 'react-bootstrap';
+import api from '../services/api';
 
 function Register() {
+    const [full_name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [phone, setPhone] = useState('');
+
+    async function handleRegister() {
+        const createuser = await api.post('/users/signup/', {
+            full_name,
+            email,
+            password,
+            phone,
+        });
+    }
+
     return (
         <div>
             <nav className="navbar">
@@ -33,17 +49,34 @@ function Register() {
                         <form className="form">
                             <label className="label-input">
                                 <i className="fas fa-user icon-modify"></i>
-                                <input type="text" placeholder="Nome" />
+                                <input
+                                    type="text"
+                                    placeholder="Nome"
+                                    value={full_name}
+                                    onChange={(e) => setName(e.target.value)}
+                                />
                             </label>
 
                             <label className="label-input">
                                 <i className="fas fa-envelope icon-modify"></i>
-                                <input type="email" placeholder="Email" />
+                                <input
+                                    type="email"
+                                    placeholder="Email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
                             </label>
 
                             <label className="label-input">
                                 <i className="fas fa-lock icon-modify"></i>
-                                <input type="password" placeholder="Senha" />
+                                <input
+                                    type="password"
+                                    placeholder="Senha"
+                                    value={password}
+                                    onChange={(e) =>
+                                        setPassword(e.target.value)
+                                    }
+                                />
                             </label>
 
                             <label className="label-input">
@@ -53,10 +86,15 @@ function Register() {
                                     required
                                     placeholder="(99) 99999-9999"
                                     maxLength={11}
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
                                 />
                             </label>
 
-                            <button className="btn-cadastro btn-second">
+                            <button
+                                className="btn-cadastro btn-second"
+                                onClick={() => handleRegister()}
+                            >
                                 registrar
                             </button>
                         </form>
