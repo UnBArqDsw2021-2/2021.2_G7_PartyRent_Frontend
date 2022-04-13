@@ -1,9 +1,39 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
 import ProductItem from './ProductItem';
  
-let productsPlaceholder = Array(10).fill(<ProductItem id="0000" title='Product Item' value='$0,00'/>)
+interface Props {
 
-class Products extends React.Component {
+}
+ 
+interface State {
+    products: []
+}
+
+class Products extends React.Component<Props, State> {
+    constructor(props: Props | Readonly<Props>) {
+        super(props);
+        this.state = {
+            products: []
+        };
+    }
+
+    componentDidMount() {
+        console.log("Start fetching products")
+        fetch("http://127.0.0.1:8000/product/",  {
+            "method": "GET"
+        })
+        .then(response => response.json())
+        .then(response => {
+            this.setState({
+                products: response
+            })
+            console.log("Finishing fetching products")
+        })
+        .catch(err => {console.log(err);
+        });
+    }
+
     render() { 
         return (  
             <div>
@@ -12,7 +42,15 @@ class Products extends React.Component {
                     <p>Alugue para a sua festa</p>
                 </header>
                 <div className="products-grid">
-                    {productsPlaceholder}
+                    {this.state.products.map((product, index) => {
+                        return <div key={index}>
+                            <ProductItem
+                                id={product['name']}
+                                title={product['name']}
+                                value={product['price']}
+                            />
+                        </div>
+                    })}
                 </div>
             </div>
         );
