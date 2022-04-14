@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Alert, Modal, Button } from 'react-bootstrap';
 import './styles.css';
-import axios from 'axios';
+import api from '../services/api';
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -13,36 +13,34 @@ function Login() {
     const [alertText, setAlertText] = useState('');
 
     async function handleLogin() {
-        // try {
-        const response = await axios.get(`http://127.0.0.1:8000/users/`);
-        console.log(response.data[0]);
-        throw new Error('Something went badly wrong!');
+        try {
+            await api.get('/users/').then((response) => {
+                var dados = response.data;
+                for (var usuario of dados) {
+                    if (usuario.email === email) {
+                        localStorage.setItem('idUser', usuario.id);
+                        self.location = '/cart';
+                        return true;
+                    }
+                }
+                alert('Login ou senha incorreta');
+            });
+        } catch (err) {
+            try {
+                if (
+                    err.response.status === 404 ||
+                    err.response.status === 400 ||
+                    err.response.status === 500
+                ) {
+                    alert('Usuario ou senha incorreto');
+                }
+            } catch {
+                alert(
+                    'Ocorreu um erro com o sistema, tente novamente mais tarde',
+                );
+            }
+        }
     }
-    // if (
-    //     responseUser.status == 200 ||
-    //     responseUser.status == 200 ||
-    //     responseUser.status == 400
-    // ) {
-    //     if (responseUser.data.password != password) {
-    //         console.log('Não deu bom');
-    //     } else {
-    //         console.log('deu bom');
-    //     }
-    // }
-    // } catch (err) {
-    //     if (err.response.status == 404 || err.response.status == 400) {
-    //         setShow(true);
-    //         setVariant('danger');
-    //         setAlertText('Email/Senha incorretos, digite novamente.');
-    //     }
-    //     if (err.response.status == 500) {
-    //         setShow(true);
-    //         setVariant('danger');
-    //         setAlertText(
-    //             'Ocorreu algum erro no seu login, tente novamente.',
-    //         );
-    //     }
-    // }
 
     return (
         <div className="container-main">

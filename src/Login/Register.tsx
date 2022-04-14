@@ -15,7 +15,7 @@ function Register() {
 
     async function handleRegister() {
         try {
-            const response = await api
+            await api
                 .post('/users/', {
                     username,
                     phone_number: phone,
