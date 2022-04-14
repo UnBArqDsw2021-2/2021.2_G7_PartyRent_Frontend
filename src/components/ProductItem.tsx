@@ -16,7 +16,7 @@ class ProductItem extends React.Component<Props, State> {
         return (
             <Link to={this.props.id}>
                 <p>{this.props.title}</p>
-                <p>{this.props.value}</p>
+                <p>R${this.props.value}</p>
             </Link>
         );
     }

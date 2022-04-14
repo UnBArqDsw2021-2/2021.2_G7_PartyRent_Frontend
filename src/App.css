@@ -29,3 +29,11 @@
 .navigation-bar {
   text-align: center;
 }
+
+.product-item {
+  width: 170px;
+  height: 135px;
+  border: 3px outset gray;
+  padding: 20px;
+  line-height: 50px;
+}

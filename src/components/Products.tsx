@@ -43,7 +43,7 @@ class Products extends React.Component<Props, State> {
                 </header>
                 <div className="products-grid">
                     {this.state.products.map((product, index) => {
-                        return <div key={index}>
+                        return <div className="product-item" key={index}>
                             <ProductItem
                                 id={product['name']}
                                 title={product['name']}
