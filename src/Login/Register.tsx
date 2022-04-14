@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Alert, Modal, Button } from 'react-bootstrap';
-import axios from 'axios';
+import api from '../services/api';
 
 function Register() {
     const [username, setName] = useState('');
@@ -9,17 +9,34 @@ function Register() {
     const [password, setPassword] = useState('');
     const [phone, setPhone] = useState('');
     const [show, setShow] = useState(false);
+    const [showModal, setShowModal] = useState(false);
     const [variant, setVariant] = useState('');
     const [alertText, setAlertText] = useState('');
 
     async function handleRegister() {
-        const response = await axios.post(`http://127.0.0.1:8000/users/`, {
-            username,
-            phone,
-            email,
-            password,
-        });
-        console.log(response);
+        try {
+            const response = await api
+                .post('/users/', {
+                    username,
+                    phone_number: phone,
+                    email,
+                    password,
+                })
+                .then((response) => {
+                    if (response.status === 200 || response.status === 201) {
+                        alert('Usuário cadastrado corretamente.');
+                        self.location = '/login';
+                    }
+                });
+        } catch (err) {
+            if (
+                err.response.status === 404 ||
+                err.response.status === 400 ||
+                err.response.status === 500
+            ) {
+                alert('Ocorreu algum erro no seu cadastro, tente novamente.');
+            }
+        }
     }
     return (
         <div>
