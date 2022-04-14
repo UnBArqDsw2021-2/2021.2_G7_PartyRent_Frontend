@@ -20,7 +20,7 @@ class Products extends React.Component<Props, State> {
 
     componentDidMount() {
         console.log("Start fetching products")
-        fetch("http://127.0.0.1:8000/product/",  {
+        fetch("http://127.0.0.1:8040/product/",  {
             "method": "GET"
         })
         .then(response => response.json())
@@ -45,7 +45,7 @@ class Products extends React.Component<Props, State> {
                     {this.state.products.map((product, index) => {
                         return <div className="product-item" key={index}>
                             <ProductItem
-                                id={product['name']}
+                                id={product['url'].split('/')[4]}
                                 title={product['name']}
                                 value={product['price']}
                             />
