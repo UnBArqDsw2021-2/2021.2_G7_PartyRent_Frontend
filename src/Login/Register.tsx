@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Alert, Modal, Button } from 'react-bootstrap';
-import api from '../services/api';
+import axios from 'axios';
 
 function Register() {
-    const [full_name, setName] = useState('');
+    const [username, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [phone, setPhone] = useState('');
+    const [show, setShow] = useState(false);
+    const [variant, setVariant] = useState('');
+    const [alertText, setAlertText] = useState('');
 
     async function handleRegister() {
-        const createuser = await api.post('/users/signup/', {
-            full_name,
+        const response = await axios.post(`http://127.0.0.1:8000/users/`, {
+            username,
+            phone,
             email,
             password,
-            phone,
         });
+        console.log(response);
     }
-
     return (
         <div>
             <nav className="navbar">
@@ -52,7 +55,7 @@ function Register() {
                                 <input
                                     type="text"
                                     placeholder="Nome"
-                                    value={full_name}
+                                    value={username}
                                     onChange={(e) => setName(e.target.value)}
                                 />
                             </label>
@@ -85,7 +88,7 @@ function Register() {
                                     type="tel"
                                     required
                                     placeholder="(99) 99999-9999"
-                                    maxLength={11}
+                                    maxLength={14}
                                     value={phone}
                                     onChange={(e) => setPhone(e.target.value)}
                                 />
@@ -104,5 +107,4 @@ function Register() {
         </div>
     );
 }
-
 export default Register;

@@ -2,9 +2,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Alert, Modal, Button } from 'react-bootstrap';
-import api from '../services/api';
-
 import './styles.css';
+import axios from 'axios';
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -15,29 +14,35 @@ function Login() {
 
     async function handleLogin() {
         // try {
-        //     const responseUser = await api.put('/users', { email, password });
-        //     console.log(responseUser);
-        //     if (responseUser.status == 200 || responseUser.status == 200) {
-        //         if (responseUser.data.password != password) {
-        //             console.log('Não deu bom');
-        //         } else {
-        //             console.log('deu bom');
-        //         }
-        //     }
-        // } catch (err) {
-        //     if (err.response.status === 404 || err.response.status === 400) {
-        //         setShow(true);
-        //         setVariant('danger');
-        //         setAlertText('Email/Senha incorretos, digite novamente.');
-        //     }
-        //     if (err.response.status === 500) {
-        //         setShow(true);
-        //         setVariant('danger');
-        //         setAlertText(
-        //             'Ocorreu algum erro no seu login, tente novamente.',
-        //         );
-        //     }
+        const response = await axios.get(`http://127.0.0.1:8000/users/`);
+        console.log(response.data[0]);
+        throw new Error('Something went badly wrong!');
     }
+    // if (
+    //     responseUser.status == 200 ||
+    //     responseUser.status == 200 ||
+    //     responseUser.status == 400
+    // ) {
+    //     if (responseUser.data.password != password) {
+    //         console.log('Não deu bom');
+    //     } else {
+    //         console.log('deu bom');
+    //     }
+    // }
+    // } catch (err) {
+    //     if (err.response.status == 404 || err.response.status == 400) {
+    //         setShow(true);
+    //         setVariant('danger');
+    //         setAlertText('Email/Senha incorretos, digite novamente.');
+    //     }
+    //     if (err.response.status == 500) {
+    //         setShow(true);
+    //         setVariant('danger');
+    //         setAlertText(
+    //             'Ocorreu algum erro no seu login, tente novamente.',
+    //         );
+    //     }
+    // }
 
     return (
         <div className="container-main">
@@ -94,7 +99,7 @@ function Login() {
                             </p>
                             <button
                                 className="btn-cadastro btn-second"
-                                onClick={() => handleLogin(email, password)}
+                                onClick={() => handleLogin()}
                             >
                                 Login
                             </button>
