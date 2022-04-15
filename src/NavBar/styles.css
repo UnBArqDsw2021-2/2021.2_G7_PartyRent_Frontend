@@ -1,18 +1,22 @@
 .nav-bar {
-  text-align: center;
   background-image: linear-gradient(90deg, rgba(159,63,234,1) 35%, rgba(176,96,191,1) 84%);
-  height: 40px;
+  height: 50px;
   display: flex;
+}
+
+.nav-btnbar {
+    position: absolute;
+    right: 10px;
 }
 
 .nav-btn {
     background-color: transparent;
     border: 1px solid #FFFFFF;
     transition: background-color 0.5s;
-    border-radius: 10px;
+    border-radius: 15px;
     font-size: 20px;
     font-weight: 300;
-    line-height: 30px;
+    line-height: 45px;
     color: white;
 }
 
@@ -21,12 +25,10 @@
     color: #9F3FEA;
 }
 
-.nav-btnbar {
-    float: right;
-}
 
 .nav-logo {
-    align-self: left;
-    height: 50px;
-    width: 50px;
+    position: absolute;
+    left: 10px;
+    height: 60px;
+    width: 60px;
 }

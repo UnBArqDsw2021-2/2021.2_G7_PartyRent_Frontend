@@ -8,13 +8,11 @@ class NavigationBar extends React.Component {
         return (
             <div className="nav-bar">
 
-                <nav className = "nav-logo">
-                    <Link to="/">
-                        <img src = { logo }/>
-                    </Link>
-                </nav>
+                <Link to="/">
+                    <img className = "nav-logo" src = { logo }/>
+                </Link>
 
-                <nav className = "nav-btnbar">
+                <div className = "nav-btnbar">
                     <Link to="/">
                         <button className = "nav-btn">Home</button>
                     </Link>
@@ -27,7 +25,7 @@ class NavigationBar extends React.Component {
                     <Link to="/login">
                         <button className = "nav-btn">Login</button>
                     </Link>
-                </nav>
+                </div>
             </div>
         );
     }
