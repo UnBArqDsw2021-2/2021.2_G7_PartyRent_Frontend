@@ -13,11 +13,12 @@
     background-color: transparent;
     border: 1px solid #FFFFFF;
     transition: background-color 0.5s;
-    border-radius: 15px;
+    border-radius: 20px;
     font-size: 20px;
     font-weight: 300;
     line-height: 45px;
     color: white;
+    margin-right: 10px;
 }
 
 .nav-btn:hover {
