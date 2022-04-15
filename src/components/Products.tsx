@@ -20,7 +20,7 @@ class Products extends React.Component<Props, State> {
 
     componentDidMount() {
         console.log("Start fetching products")
-        fetch("http://127.0.0.1:8040/product/",  {
+        fetch("http://127.0.0.1:8000/product/",  {
             "method": "GET"
         })
         .then(response => response.json())
