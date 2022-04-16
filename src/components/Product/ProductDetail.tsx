@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom'; 
 import { useState } from 'react';
+import Button from '../Button';
 
 function ProductDetail() { 
     let params = useParams();
@@ -17,10 +18,17 @@ function ProductDetail() {
     }, []);
 
     return (
-        <div>
-            <p>Product details</p>
-            <p>{state?.['name']}</p>
-            <p>ID: {params.id}</p>
+        <div className='product-details'>
+            <img 
+                src="https://via.placeholder.com/300" 
+                alt="placeholder"
+            />
+            <div className='product-detail-text'>
+                <p>{state?.['name']}</p>
+                <p>{state?.['description']}</p>
+                <p>R${state?.['price']}</p>
+                <button className='add-to-cart'>Adicionar ao<br />Carrinho</button>
+            </div>
         </div>
     );
 }

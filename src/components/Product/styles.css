@@ -38,3 +38,36 @@
 .item-value {
   text-align: right;
 }
+
+.product-details {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-detail-text {
+  display: inline-block;
+  height: 300px;
+  width: 400px;
+  padding: 15px;
+  background-image: linear-gradient(to right top, #9f3fea, #8b35ce, #772bb2, #642298, #52197e);  width: 170px;
+
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+.add-to-cart {
+  width: 170px;
+  color: #772bb2;
+  background-color: white;
+  border: none;
+  transition-duration: 0.4s;
+}
+
+.add-to-cart:hover {
+  color: white;
+  background-color: #772bb2;
+}
