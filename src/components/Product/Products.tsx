@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
 import ProductItem from './ProductItem';
+import './styles.css';
  
 interface Props {
 
@@ -43,7 +43,7 @@ class Products extends React.Component<Props, State> {
                 </header>
                 <div className="products-grid">
                     {this.state.products.map((product, index) => {
-                        return <div className="product-item" key={index}>
+                        return <div key={index}>
                             <ProductItem
                                 id={product['url'].split('/')[4]}
                                 title={product['name']}
