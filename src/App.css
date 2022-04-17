@@ -27,8 +27,28 @@
 }
 
 .navigation-bar {
+  background-image: linear-gradient(to right top, #9f3fea, #8b35ce, #772bb2, #642298, #52197e);
   text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
+.nav-items{
+ 
+  display: flex;
+}
+
+.navigation-bar a {
+  margin: 1rem;
+  text-decoration: none;
+  color: white;
+}
+
+.navigation-bar a:hover {
+  
+  color: rgb(202, 200, 200);
+}
+
+
 
 body {
   margin: 0;

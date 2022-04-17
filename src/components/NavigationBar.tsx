@@ -5,18 +5,22 @@ class NavigationBar extends React.Component {
     render() { 
         return (
             <div className="navigation-bar">
+                <div className='nav-items'>
                 <Link to="/" >
-                    <button>Home</button>
+                    Home
                 </Link>
                 <Link to="/product">
-                    <button>Explorar</button>
+                    Explorar
                 </Link>
+                </div>
+                <div className='nav-items'>
                 <Link to="/cart">
-                    <button>Carrinho</button>
+                    Carrinho
                 </Link>
                 <Link to="/login">
-                    <button>Login</button>
+                    Login
                 </Link>
+                </div>
             </div>
         );
     }

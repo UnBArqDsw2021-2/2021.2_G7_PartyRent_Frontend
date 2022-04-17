@@ -44,8 +44,8 @@ function Login() {
 
     return (
         <div className="container-main">
-            <nav className="navbar"></nav>
-            <div className="container">
+
+        
                 <div className="content first-content">
                     <div className="first-column">
                         <h2 className="title title-primary">
@@ -55,7 +55,7 @@ function Login() {
                             Cadastre-se agora!
                         </p>
                         <Link to="/register">
-                            <button className="btn-cadastro btn-primary">
+                            <button className="btn-cadastro">
                                 cadastro
                             </button>
                         </Link>
@@ -86,15 +86,18 @@ function Login() {
                                 />
                             </label>
                             <div className="div-lembrar-senha">
-                                <input id="checkbox-input" type="checkbox" />
-                                <p className="description description-second">
-                                    Lembre-se de mim
-                                </p>
+                            <input className='check' type="checkbox" />
+                            <p className="description description-second">
+                                Lembre-se de mim
+                            </p>  
+                            
                             </div>
-
+                            <div className='Escsenha'>
                             <p className="description description-second">
                                 Esqueceu sua senha?
                             </p>
+                            </div>
+
                             <button
                                 className="btn-cadastro btn-second"
                                 onClick={() => handleLogin()}
@@ -103,7 +106,7 @@ function Login() {
                             </button>
                         </form>
                     </div>
-                </div>
+               
             </div>
         </div>
     );

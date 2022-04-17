@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import { Link } from 'react-router-dom';
+import logos from "./images/logos.png"
 
 class Home extends React.Component {
 
@@ -8,7 +9,7 @@ class Home extends React.Component {
         return (
             <div className="App">
               <header>
-                <h1>PartyRent</h1>
+              <img src={logos}/>
               </header>
               <Link to="/product">
                 <Button

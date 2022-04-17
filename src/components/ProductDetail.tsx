@@ -37,9 +37,13 @@ function ProductDetail() {
                     <button className="btn btn-outline-dark" onClick={()=>addProduct(product)}>
                         Adicionar ao carrinho
                     </button>
-                    <NavLink to="/cart" className=" btn mt-2">
+                  
+                    <NavLink to="/cart">
+                    <button className="btn btn-outline-dark mt-2" >
                         Ir para o carrinho
+                    </button>
                     </NavLink>
+                   
                 </div>
                 <div className="col-md-6">
                     <img src={cadeira} alt={product.name} height="300px" width="350px" />
