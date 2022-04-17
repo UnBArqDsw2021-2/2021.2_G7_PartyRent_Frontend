@@ -18,7 +18,7 @@
   width: 170px;
   padding: 15px;
   opacity: 0.8;
-  background-image: linear-gradient(to right top, #9f3fea, #8b35ce, #772bb2, #642298, #52197e);  width: 170px;
+  background-image: linear-gradient(to right top, #9f3fea, #8b35ce, #772bb2, #642298, #52197e);
   box-shadow: 5px 5px 5px 1px grey;
 
   font-family: 'Roboto', sans-serif;
@@ -51,9 +51,9 @@
 .product-detail-text {
   display: inline-block;
   height: 300px;
-  width: 400px;
+  width: 170px;
   padding: 15px;
-  background-image: linear-gradient(to right top, #9f3fea, #8b35ce, #772bb2, #642298, #52197e);  width: 170px;
+  background-image: linear-gradient(to right top, #9f3fea, #8b35ce, #772bb2, #642298, #52197e);
 
   font-family: 'Roboto', sans-serif;
   color: white;
