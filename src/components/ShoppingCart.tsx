@@ -51,6 +51,7 @@ class ShoppingCart extends React.Component<Props, State>  {
                             <CartItem 
                                 quantity={item.quantity}
                                 product_url={item.product_id}
+                                id={item.url.split('/')[4]}
                             />
                         </div>
                     })}

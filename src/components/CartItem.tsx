@@ -3,6 +3,7 @@ import React from 'react';
 interface Props {
     quantity: Number;
     product_url: string;
+    id: number;
 }
  
 interface State {
@@ -28,10 +29,18 @@ class CartItem extends React.Component<Props, State> {
                 product: response
             })
             console.log("Finishing fetching items")
-
         })
         .catch(err => {console.log(err);
         });
+    }
+
+    deleteProduct(id) {
+        fetch("http://127.0.0.1:8000/cartitem/"+id+'/', {
+            "method": "DELETE"
+        })
+        .then(response => {
+            window.location.reload(true);
+        })
     }
 
     render() { 
@@ -44,6 +53,7 @@ class CartItem extends React.Component<Props, State> {
                 <p>{this.state.product.name}</p>
                 <p>R${this.state.product.price}</p>
                 <p>{this.props.quantity}</p>
+                <button onClick={()=>this.deleteProduct(this.props.id)}>DELETAR</button>
             </div> 
         ); 
     }

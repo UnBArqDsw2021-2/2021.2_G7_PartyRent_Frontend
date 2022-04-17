@@ -50,11 +50,12 @@ function ProductDetail() {
                     <h3 className="display-8 fw-bold my-4">
                         R$ {product.price}
                     </h3>
+                    <NavLink to="/cart">
                     <button className="btn btn-outline-dark" onClick={()=>addProduct(product)}>
                         Adicionar ao carrinho
                     </button>
                   
-                    <NavLink to="/cart">
+                    
                     <button className="btn btn-outline-dark mt-2" >
                         Ir para o carrinho
                     </button>
