@@ -1,25 +1,35 @@
-import React from 'react';
+import axios from 'axios';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
+import api from "../services/api";
+import cadeira from "./images/cadeira.jpg"
 
-interface Props {
-    id: string;
-    title: string;
-    value: string;
-}
  
-interface State {
-    
-}
- 
-class ProductItem extends React.Component<Props, State> {
-    render() { 
+function ProductItem() {
+   
+        const [product, setProduct] = useState();
+        useEffect(() => {
+          api
+            .get("/product/")
+            .then((response) => {
+                console.log(response)
+                setProduct(response.data)}) 
+            .catch((err) => {
+              console.error("ops! ocorreu um erro" + err);
+            });
+        }, []);
+        
         return (
-            <Link to={this.props.id}>
-                <p>{this.props.title}</p>
-                <p>{this.props.value}</p>
-            </Link>
+            <div className='card-container'>
+               
+            {product?.name}
+            <br/>
+            <img src={cadeira} />
+            {product?.price}
+            </div>
         );
-    }
+
+
 }
  
 export default ProductItem;

@@ -50,10 +50,10 @@ function Register() {
                             Já sou cadastrado
                         </h2>
                         <p className="description description-primary">
-                            matenha-se conectado
+                            Mantenha-se conectado
                         </p>
                         <p className="description description-primary">
-                            faça o login com suas informações pessoais
+                            Faça o login com suas informações pessoais
                         </p>
                         <Link to="/login">
                             <button className="btn-cadastro btn-primary">
@@ -64,11 +64,11 @@ function Register() {
                     <div className="second-column">
                         <h2 className="title title-second">Criar sua Conta</h2>
                         <p className="description description-second">
-                            preencha os dados
+                            Preencha os dados
                         </p>
                         <form className="form">
                             <label className="label-input">
-                                <i className="fas fa-user icon-modify"></i>
+
                                 <input
                                     type="text"
                                     placeholder="Nome"
@@ -78,7 +78,7 @@ function Register() {
                             </label>
 
                             <label className="label-input">
-                                <i className="fas fa-envelope icon-modify"></i>
+
                                 <input
                                     type="email"
                                     placeholder="Email"
@@ -88,7 +88,7 @@ function Register() {
                             </label>
 
                             <label className="label-input">
-                                <i className="fas fa-lock icon-modify"></i>
+
                                 <input
                                     type="password"
                                     placeholder="Senha"
@@ -100,11 +100,11 @@ function Register() {
                             </label>
 
                             <label className="label-input">
-                                <i className="fas fa-lock icon-modify"></i>
+
                                 <input
                                     type="tel"
                                     required
-                                    placeholder="(99) 99999-9999"
+                                    placeholder="Telefone (99) 99999-9999"
                                     maxLength={14}
                                     value={phone}
                                     onChange={(e) => setPhone(e.target.value)}

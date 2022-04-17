@@ -69,7 +69,7 @@ function Login() {
                             <label className="label-input">
                                 <input
                                     type="text"
-                                    placeholder="email"
+                                    placeholder="Email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                 />

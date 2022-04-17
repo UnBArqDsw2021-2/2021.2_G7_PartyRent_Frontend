@@ -7,6 +7,9 @@ import ShoppingCart from './components/ShoppingCart';
 import Login from './Login/Login';
 import Register from './Login/Register';
 import ProductDetail from './components/ProductDetail';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/font-awesome/css/font-awesome.min.css';
+
 
 function App() {
     return (
@@ -16,8 +19,8 @@ function App() {
             </header>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/products" element={<Products />} />
-                <Route path="/products/:id" element={<ProductDetail />} />
+                <Route path="/product" element={<Products />} />
+                <Route path="/product/:id" element={<ProductDetail />} />
                 <Route path="/cart" element={<ShoppingCart />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />

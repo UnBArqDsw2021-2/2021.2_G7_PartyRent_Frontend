@@ -8,7 +8,7 @@ class NavigationBar extends React.Component {
                 <Link to="/" >
                     <button>Home</button>
                 </Link>
-                <Link to="/products">
+                <Link to="/product">
                     <button>Explorar</button>
                 </Link>
                 <Link to="/cart">
