@@ -1,18 +1,14 @@
 ## Visão geral
 
-A PartyRent é uma pequena empresa voltada a realização de aluguel para artigos diversos para festas. Mesas, cadeiras, móveis diversos e outros itens para a realização de aniversário, casamento, formaturas e demais eventos. A ideia do Projeto e realizar uma melhora no processo da empresa, realizando o desenvolvimento de uma ferramenta web para facilitar o processo de aluguel dos itens. 
+A PartyRent é uma pequena empresa voltada a realização de aluguel para artigos diversos para festas. Mesas, cadeiras, móveis diversos e outros itens para a realização de aniversário, casamento, formaturas e demais eventos. A ideia do Projeto e realizar uma melhora no processo da empresa, realizando o desenvolvimento de uma ferramenta web para facilitar o processo de aluguel dos itens.
 
-
-
-
- ## Guia de Instalação
+## Guia de Instalação
 
 Clonar repositório:
 
 `git clone https://github.com/UnBArqDsw2021-2/2021.2_G7_PartyRent_Frontend`
 
 ### Instalação Local
-
 
 ```bash
 npm install
@@ -21,9 +17,8 @@ npm install
 ```bash
 npm run dev
 ```
-Após esses passos a aplicação deverá estar acessível em [http://localhost:3000/](0.0.0.0:8080)
-  
 
+Após esses passos a aplicação deverá estar acessível em [http://localhost:3000/](http://localhost:3000/)
 
 ### Usando Docker
 
@@ -36,7 +31,8 @@ Execução do conteiner:
 
 Após esses passos a aplicação deverá estar acessível em [http://localhost:3000/](0.0.0.0:8080)
 
-## Links 
--  [Politica commits](https://github.com/UnBArqDsw2021-2/2021.2_G7_PartyRent/blob/master/docs/Base/Extras/PoliticasRepositorio.md) 
+## Links
 
--  [Repositorio Backend](https://github.com/UnBArqDsw2021-2/2021.2_G7_PartyRent_Backend) 
+-   [Politica commits](https://github.com/UnBArqDsw2021-2/2021.2_G7_PartyRent/blob/master/docs/Base/Extras/PoliticasRepositorio.md)
+
+-   [Repositorio Backend](https://github.com/UnBArqDsw2021-2/2021.2_G7_PartyRent_Backend)
