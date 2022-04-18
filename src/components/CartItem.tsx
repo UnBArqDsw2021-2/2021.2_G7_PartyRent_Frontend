@@ -45,16 +45,19 @@ class CartItem extends React.Component<Props, State> {
 
     render() { 
         return(
-            <div className='cart-item'>
-                <img 
-                    src="https://via.placeholder.com/100" 
-                    alt="placeholder"
-                />
-                <p>{this.state.product.name}</p>
-                <p>R${this.state.product.price}</p>
-                <p>{this.props.quantity}</p>
-                <button onClick={()=>this.deleteProduct(this.props.id)}>DELETAR</button>
-            </div> 
+            <>
+                    <div className='container-fluid cart-item'>
+                        <img
+                            src="https://via.placeholder.com/100"
+                            alt="placeholder"
+                        />
+                        <p>{this.state.product.name}</p>
+                        <p className="fw-bold">R${this.state.product.price}</p>
+                        <p>{this.props.quantity}</p>
+                        <button className="btn btn-dark btn-card" onClick={()=>this.deleteProduct(this.props.id)}>DELETAR</button>
+                    </div>
+            </>
+
         ); 
     }
 }

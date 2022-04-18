@@ -2,6 +2,11 @@ import React from 'react';
 import { NavItem } from 'react-bootstrap';
 import CartItem from './CartItem';
 import './style.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+
+
+'@fortawesome/react-fontawesome'
 
 interface Props {
 
@@ -22,8 +27,8 @@ class ShoppingCart extends React.Component<Props, State>  {
         };
     }
 
+
     componentDidMount() {
-        console.log("Start fetching items")
         fetch("http://127.0.0.1:8000/cartitem/",  {
             "method": "GET"
         })
@@ -39,25 +44,32 @@ class ShoppingCart extends React.Component<Props, State>  {
         });
     }
     
-    render() { 
+    render() {
+
         return (
-            <div>
-                <header className="cart-header">
-                    <h1>Seu Carrinho</h1>
-                </header>
-                <div className='shopping-cart'>
-                    {this.state.cartItems.map((item, index) => {
-                        return <div key={index}>
-                            <CartItem 
-                                quantity={item.quantity}
-                                product_url={item.product_id}
-                                id={item.url.split('/')[4]}
-                            />
-                        </div>
-                    })}
-                    
+            <div className="container-main">
+
+                <div className="container mt-5 mb-5 card-teste" >
+
+                    <header className="cart-header mt-5">
+                        <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
+                        <h1>Seu Carrinho</h1>
+                    </header>
+                    <div className='mt-5'>
+                        {this.state.cartItems.map((item, index) => {
+                            return <div key={index}>
+                                <CartItem
+                                    quantity={item.quantity}
+                                    product_url={item.product_id}
+                                    id={item.url.split('/')[4]}
+                                />
+                            </div>
+                        })}
+                    </div>
                 </div>
+
             </div>
+
         );
     }
 }

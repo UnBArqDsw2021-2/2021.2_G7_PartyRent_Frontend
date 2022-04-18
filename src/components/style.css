@@ -24,6 +24,7 @@
 
 .cart-header {
     text-align: center;
+    color: rgb(179, 77, 247);
 }
 
 .shopping-cart {
@@ -33,15 +34,24 @@
     transform: translate(-50%, -50%);
 }
 
+.btn-card {
+    width: auto;
+}
+
+.card-teste {
+    border-radius: 15px;
+    box-sizing: border-box;
+    /*background-color: rgb(235, 235, 235);*/
+    background-color: #FFFFFF;
+}
+
 .cart-item {
-    height: 100px;
-    width: 500px;
     margin-bottom: 5px;
     padding: 5px;
     display: flex;
     justify-content: space-between;
-    color: white;
-    background-image: linear-gradient(to right top, #9f3fea, #8b35ce, #772bb2, #642298, #52197e);
+    color: black;
+    /*background-image: linear-gradient(to right top, #9f3fea, #8b35ce, #772bb2, #642298, #52197e);*/
 } 
 
 
