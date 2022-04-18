@@ -10,7 +10,6 @@ import ProductDetail from './components/ProductDetail';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 
-
 function App() {
     return (
         <BrowserRouter>
