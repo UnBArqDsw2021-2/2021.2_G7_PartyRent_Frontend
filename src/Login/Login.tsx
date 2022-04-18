@@ -43,7 +43,7 @@ function Login() {
     }
 
     return (
-        <div className="container-main">
+        <div className="container-main-register-login">
 
         
                 <div className="content first-content">
