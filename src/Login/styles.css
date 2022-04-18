@@ -2,17 +2,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.container {
+    height: auto;
+    width: 100%;
+    background-color: rgb(235, 235, 235);
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #ecf0f1;
-    font-family: 'Roboto', sans-serif;
+    
 }
+
+.container-main-register-login {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    justify-content: center;
+}
+
+input.check{
+ 
+    width: 18px!important;
+    margin-top: 0.6rem;
+    height: 14px !important;
+  
+}
+
 .content {
+    margin-top: 5rem;
     border-radius: 15px;
     background-color: #FFFFFF;
     width: 960px;
@@ -52,7 +70,17 @@
 .description {
     font-size: 12px;
     font-weight: 300;
-    line-height: 30px;
+    line-height: 32px;
+}
+
+.div-lembrar-senha{
+display: flex;
+justify-content: center;
+}
+
+.Escsenha{
+    display: flex;
+    justify-content: center;
 }
 
 .description-primary {
@@ -75,7 +103,7 @@ footer {
 .btn-cadastro {
     border-radius: 15px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #9F3FEA;
     font-size: 10px;
     padding: 10px 50px;
     cursor: pointer;
@@ -85,20 +113,25 @@ footer {
     border: none;
     margin-top: 1rem;
 }
+.btn-cadastro:hover{
+    color: white;
+    background: #9F3FEA;
+}
 
-.btn-primary {
+.btn-primarylogin {
     background-color: transparent;
     border: 1px solid #FFFFFF;
     transition: background-color 0.5s;
 }
 
-.btn-primary:hover {
+.btn-primarylogin:hover {
     background-color: #FFFFFF;
     color: #9F3FEA;
 }
 
 .btn-second {
     background-color: #9F3FEA;
+    color: white;
     border: 1px solid #ecf0f1;
     transition: background-color 0.5s;
 }
