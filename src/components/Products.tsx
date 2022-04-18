@@ -1,45 +1,40 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react'
 import cadeira from "./images/cadeira.jpg"
 
 import './style.css'
-import {NavLink} from "react-router-dom";
-import * as url from "url";
+import {NavLink} from "react-router-dom"
 
  function Products() {
 
-    const [data, setData] = useState([]);
-    const [filter, setFilter] = useState(data);
-    const [loading, setLoading] = useState(false);
-    let componentMounted = true;
+    const [data, setData] = useState([])
+    const [filter, setFilter] = useState(data)
+    const [loading, setLoading] = useState(false)
+    let componentMounted = true
 
         useEffect(() => {
            const getProducts = async () => {
-               setLoading(true);
-               const response = await fetch("http://localhost:8000/product/");
-               console.log('entrou')
-               console.log(response)
+               setLoading(true)
+               const response = await fetch("http://localhost:8000/product/")
                if (componentMounted) {
-
                    setData(await response.clone().json())
-                   setFilter(await response.json());
-                   setLoading(false);
-                   console.log(filter)
+                   setFilter(await response.json())
+                   setLoading(false)
                }
                return () => {
-                   componentMounted = false;
+                   componentMounted = false
 
                }
            }
-               getProducts();
-        }, []);
+               getProducts()
+        }, [])
 
      const Loading = () => {
          return (
              <>
 
              </>
-         );
-     };
+         )
+     }
 
 
      const ShowProducts = () => {
@@ -86,7 +81,7 @@ import * as url from "url";
                  </div>
              </div>
          </div>
-     );
- };
+     )
+ }
  
-export default Products;
+export default Products

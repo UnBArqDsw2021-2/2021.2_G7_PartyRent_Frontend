@@ -9,12 +9,9 @@ function ProductDetail() {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        console.log('useEffect')
         const getProduct = async () => {
             setLoading(true);
             const response = await fetch(`http://localhost:8000/product/${id}/`);
-            console.log(response)
-            console.log('passou')
             setProduct(await response.json());
             setLoading(false);
         }

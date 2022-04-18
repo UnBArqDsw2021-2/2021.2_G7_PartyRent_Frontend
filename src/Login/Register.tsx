@@ -40,10 +40,8 @@ function Register() {
     }
     return (
         <div>
-            <nav className="navbar">
-                <Link to="/"></Link>
-            </nav>
-            <div className="container">
+            <div className="container-main">
+
                 <div className="content first-content">
                     <div className="first-column">
                         <h2 className="title title-primary">
@@ -56,7 +54,7 @@ function Register() {
                             Faça o login com suas informações pessoais
                         </p>
                         <Link to="/login">
-                            <button className="btn-cadastro btn-primary">
+                            <button className="btn-cadastro btn-primarylogin">
                                 entrar
                             </button>
                         </Link>

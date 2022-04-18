@@ -107,13 +107,13 @@ footer {
     background: #9F3FEA;
 }
 
-.btn-primary {
+.btn-primarylogin {
     background-color: transparent;
     border: 1px solid #FFFFFF;
     transition: background-color 0.5s;
 }
 
-.btn-primary:hover {
+.btn-primarylogin:hover {
     background-color: #FFFFFF;
     color: #9F3FEA;
 }
