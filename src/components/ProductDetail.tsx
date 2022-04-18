@@ -18,6 +18,22 @@ function ProductDetail() {
         getProduct();
     }, []);
 
+    const addProduct = (product) => {
+        console.log(product.id)
+        fetch("http://localhost:8000/cartitem/", {
+            "method": "POST",
+            "headers": {
+                "accept": "application/json",
+                "Content-Type": "application/json"
+            },
+            "body": JSON.stringify({
+                quantity: 1,
+                product_id: "http://127.0.0.1:8000/product/"+product.id+'/',
+                cart_id: "http://127.0.0.1:8000/cart/1/"
+            })
+        })
+    }
+
     const ShowProduct = () => {
         return(
             <>
@@ -31,11 +47,12 @@ function ProductDetail() {
                     <h3 className="display-8 fw-bold my-4">
                         R$ {product.price}
                     </h3>
+                    <NavLink to="/cart">
                     <button className="btn btn-outline-dark" onClick={()=>addProduct(product)}>
                         Adicionar ao carrinho
                     </button>
                   
-                    <NavLink to="/cart">
+                    
                     <button className="btn btn-outline-dark mt-2" >
                         Ir para o carrinho
                     </button>
