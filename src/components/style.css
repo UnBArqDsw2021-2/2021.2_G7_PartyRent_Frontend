@@ -38,6 +38,11 @@
     width: auto;
 }
 
+.card-alugue {
+    width: auto;
+
+}
+
 .card-teste {
     border-radius: 15px;
     box-sizing: border-box;
