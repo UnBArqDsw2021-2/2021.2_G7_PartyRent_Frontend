@@ -1,17 +1,18 @@
 import React from 'react';
 import Button from './Button';
 import { Link } from 'react-router-dom';
- 
+import logos from "./images/logos.png"
+
 class Home extends React.Component {
 
     render() { 
         return (
             <div className="App">
               <header>
-                <h1>PartyRent</h1>
+              <img src={logos}/>
               </header>
-              <Link to="/products">
-                <Button 
+              <Link to="/product">
+                <Button
                 title='Descubra os nossos produtos'
                 color='#5b3ea1'
                 />

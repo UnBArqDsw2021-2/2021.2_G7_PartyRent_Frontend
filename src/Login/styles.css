@@ -1,0 +1,212 @@
+.container-main {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    justify-content: center;
+    
+}
+
+.container-main-register-login {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    justify-content: center;
+}
+
+input.check{
+ 
+    width: 18px!important;
+    margin-top: 0.6rem;
+    height: 14px !important;
+  
+}
+
+.content {
+    margin-top: 5rem;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    width: 960px;
+    height: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to right top, #9f3fea, #8b35ce, #772bb2, #642298, #52197e);
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    left: 0;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: full-size-kana;
+}
+
+.title-primary {
+    color: #FFFFFF;
+}
+
+.title-second {
+    color: #9F3FEA;
+}
+
+.description {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 32px;
+}
+
+.div-lembrar-senha{
+display: flex;
+justify-content: center;
+}
+
+.Escsenha{
+    display: flex;
+    justify-content: center;
+}
+
+.description-primary {
+    color: #FFFFFF;
+}
+
+.description-second {
+    color: #33183F;
+}
+
+.description-third {
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #ecf0f1;
+}
+
+.btn-cadastro {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #9F3FEA;
+    font-size: 10px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    border: none;
+    margin-top: 1rem;
+}
+.btn-cadastro:hover{
+    color: white;
+    background: #9F3FEA;
+}
+
+.btn-primarylogin {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    transition: background-color 0.5s;
+}
+
+.btn-primarylogin:hover {
+    background-color: #FFFFFF;
+    color: #9F3FEA;
+}
+
+.btn-second {
+    background-color: #9F3FEA;
+    color: white;
+    border: 1px solid #ecf0f1;
+    transition: background-color 0.5s;
+}
+
+.btn-second:hover {
+    background-color: #ecf0f1;
+    border: 1px solid #9F3FEA;
+    color: #9F3FEA;
+}
+
+.first-content {
+    display: flex;
+}
+
+.first-content .second-column {
+    z-index: 11;
+}
+
+.first-column {
+    text-align: center;
+    width: 40%;
+    z-index: 10;
+}
+
+.second-column {
+    width: 60%;
+    flex: 2 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.form input {
+    height: 45px;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    background-color: #ecf0f1;
+
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: #000 !important;
+}
+
+.label-input {
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+
+.icon-modify {
+    padding: 0 5px;
+}
+
+.div-lembrar-senha {
+    display: inline-flex;
+}
+
+#checkbox-input {!important;
+    height: 15px;
+    width: 10%;
+}
+
+.password {
+    color: #34495e;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+}
